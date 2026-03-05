@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JFCM RC2 SECTOR 9 · General Meeting 2026</title>
+  <style>
+    /* reset & base — professional, clean, no icons, no ornaments */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f2f0eb;   /* quiet paper tone */
+      font-family: 'Georgia', 'Times New Roman', Times, serif;
+      line-height: 1.5;
+      color: #1e1e1e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    /* main card – formal, minimal, no icons, no decorative images */
+    .invitation {
+      max-width: 800px;
+      width: 100%;
+      background: #ffffff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e2ddd5;
+      padding: 3rem 3rem 2.8rem;
+    }
+
+    /* typography hierarchy – strict professional */
+    .superscription {
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #6b5843;
+      border-bottom: 1px solid #dad3cb;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.75rem;
+      font-weight: 400;
+      word-spacing: 2px;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      color: #2d2a26;
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+      font-family: 'Helvetica', 'Arial', sans-serif;
+    }
+
+    .subhead {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #5f4e3c;
+      margin-bottom: 1.8rem;
+      border-bottom: 1px solid #dad3cb;
+      padding-bottom: 0.9rem;
+      font-style: normal;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .scripture {
+      font-size: 1.2rem;
+      color: #7a6852;
+      margin-bottom: 2.5rem;
+      font-style: italic;
+      line-height: 1.4;
+      border-left: 3px solid #c9b9a8;
+      padding-left: 1.3rem;
+      background: transparent;
+      font-weight: 350;
+    }
+
+    /* agenda block — clean table of contents style */
+    .agenda-section {
+      margin: 2.8rem 0 2.8rem;
+    }
+
+    .agenda-title {
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #3a332b;
+      margin-bottom: 1.4rem;
+      border-bottom: 1px dashed #c9bcaf;
+      padding-bottom: 0.3rem;
+    }
+
+    .agenda-list {
+      list-style: none;
+    }
+
+    .agenda-list li {
+      font-size: 1.1rem;
+      padding: 0.45rem 0 0.45rem 0.5rem;
+      border-bottom: 1px dotted #e3dbd2;
+      color: #2c2824;
+      font-weight: 400;
+      display: flex;
+      align-items: baseline;
+    }
+
+    /* small ordinal – no icons, just plain text */
+    .agenda-list li::before {
+      content: "—";
+      color: #9a8b7c;
+      font-weight: 300;
+      margin-right: 1rem;
+      margin-left: 0.1rem;
+      display: inline-block;
+      width: 1.2rem;
+    }
+
+    /* details grid — strict no icons, only text */
+    .details {
+      margin: 2.8rem 0 1.8rem;
+      background: #f9f7f4;
+      padding: 1.8rem 2rem 1.6rem;
+      border: 1px solid #e2d9cf;
+    }
+
+    .detail-item {
+      display: flex;
+      align-items: baseline;
+      font-size: 1.1rem;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #ece5dd;
+    }
+
+    .detail-item:last-child {
+      border-bottom: none;
+    }
+
+    .detail-label {
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #5b4b3a;
+      width: 110px;
+      font-size: 0.9rem;
+    }
+
+    .detail-value {
+      font-weight: 400;
+      color: #1e1b18;
+    }
+
+    .detail-value strong {
+      font-weight: 600;
+      color: #2f2a25;
+    }
+
+    /* note for “after eating fellowship” – subtle */
+    .time-note {
+      margin-top: 0.3rem;
+      font-size: 0.95rem;
+      color: #776b5f;
+      font-style: italic;
+      letter-spacing: 0.2px;
+    }
+
+    /* no decoration, no icons, just a quiet line */
+    .footer-note {
+      margin-top: 2.2rem;
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: #8d7f70;
+      letter-spacing: 2px;
+      border-top: 1px solid #dad3cb;
+      padding-top: 1.4rem;
+      text-align: center;
+      word-spacing: 2px;
+    }
+
+    /* every element is plain text, no images, no icons */
+    hr {
+      display: none;
+    }
+
+    /* responsivity: clean stacking */
+    @media (max-width: 550px) {
+      .invitation {
+        padding: 2rem 1.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .subhead {
+        font-size: 1.2rem;
+      }
+      .detail-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+      }
+      .detail-label {
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="invitation">
+    <!-- top line: neutral, location code -->
+    <div class="superscription">jfcm rc2 · sector 9 · Riyadh, KSA</div>
+
+    <!-- main heading as given, no icons, all text -->
+    <h1>JFCM RC2 SECTOR 9</h1>
+    <div class="subhead">GENERAL MEETING 2026</div>
+
+    <!-- scripture line, verbatim, no extra marks -->
+    <div class="scripture">Ephesians 4:11–12</div>
+
+    <!-- PROGRAM AND AGENDA, exactly as written -->
+    <div class="agenda-section">
+      <div class="agenda-title">PROGRAM AND AGENDA</div>
+      <ul class="agenda-list">
+        <li>Call to Order</li>
+        <li>Opening Prayer</li>
+        <li>Scripture Reading & Devotional</li>
+        <li>Pastor Report</li>
+        <li>Ministry Department Reports</li>
+        <li>Membership Report</li>
+        <li>Financial Report</li>
+        <li>Vision for the Coming Year</li>
+        <li>Announcement</li>
+        <li>Member Questions & Open Floor</li>
+        <li>Closing Remarks & Prayer</li>
+        <li>Adjournment</li>
+      </ul>
+    </div>
+
+    <!-- date/time/location block: pure text, grid layout without icons -->
+    <div class="details">
+      <div class="detail-item">
+        <span class="detail-label">DATE</span>
+        <span class="detail-value"><strong>March 06, 2026</strong></span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">TIME</span>
+        <span class="detail-value"><strong>After Eating Fellowship</strong> <span class="time-note">(immediately following the meal)</span></span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">LOCATION</span>
+        <span class="detail-value"><strong>S9 Faithhouse</strong> · Sector 9, JFCM RC2</span>
+      </div>
+    </div>
+
+    <!-- final line — nothing but a discreet acknowledgement / publishing info -->
+    <div class="footer-note">
+      PUBLISHED FOR THE CHURCH · ALL MEMBERS ARE KINDLY REQUESTED TO ATTEND
+    </div>
+  </div>
+
+  <!-- absolutely no icons, no images, no font libraries — only system fonts.
+       the design matches the provided text verbatim, static and professional. -->
+</body>
+</html>
